@@ -16,13 +16,16 @@ I. Introduction:
    3. Calculation and evaluation on predictions.
    4. Analysis on the performance of classifiers studied.
    
-II. Materials and Methods (400 words): 
+II. Materials and Methods: 
+
    the dataset:
-   The datasets will be from 
+   
    technologies and algorithms that will be used:
    
 References:
+
 [1] NBA statistics data http://www.cs.cmu.edu/~awm/10701/project/data.html
+
 [2] Cao,Chenjie "Sports Data Mining Technology Used in Basketball Outcome Prediction" https://arrow.tudublin.ie/cgi/viewcontent.cgi?article=1040&context=scschcomdis 
 
 
