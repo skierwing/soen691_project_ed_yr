@@ -19,7 +19,7 @@ I. Introduction:
 II. Materials and Methods: 
 
   The dataset:
-   Using NBA/ABA statistics data gathered from 1946 till 2004, the team will create the needed datasets to try to predict players scores and position.  The datasets will be cleaned, filtered and then labeled to suit the calculations that are going to be done. 
+  Using NBA/ABA statistics data gathered from 1946 till 2004, the team will create the needed datasets to try to predict players scores and position.  The datasets will be cleaned, filtered and then labeled to suit the calculations that are going to be done. 
    
    technologies and algorithms that will be used:
    Spark's SVM and scikit-learn Naive Bayes libraries will be used to conduct the predictions.
