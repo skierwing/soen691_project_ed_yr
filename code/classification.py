@@ -3,6 +3,8 @@ from sklearn.model_selection import KFold
 from sklearn import model_selection
 import numpy as np
 
+from sklearn.tree import DecisionTreeClassifier
+
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.svm import SVC
@@ -45,17 +47,15 @@ def run_GNB(X_train,X_test,y_train,y_test):
     print("--- Testing Time %s seconds ---" % (time.time() - start_time))
     return 0
 
-#test only --start#
+###test-start
 data = np.array(ld.collect()).astype(np.float64)
-X = data[:,1:]
+X = data[:,2:]
 y = data[:,1]
-validation_size = 0.01
-seed = 150
-X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_size=validation_size, random_state=seed)
-print(X_train)
-print(X_test)
-print(y_train)
-print(y_test)
+
+X_train = X[0:774]
+X_test = X[775:]
+y_train = y[0:774]
+y_test = y[775:]
 
 print("############## Algorithm 1: Support Vector Machines #################")
 run_SVM(X_train, X_test, y_train, y_test)
@@ -64,13 +64,13 @@ print("############## Algorithm 2: Gaussian Naive Bayes #################")
 run_GNB(X_train, X_test, y_train, y_test)
 
 print(xxxx)
-#test only --end#
+###test-end
 
 
 ns = 5
 print("############## model-0: all columns #################")
 data = np.array(ld.collect()).astype(np.float64)
-X = data[:,1:]
+X = data[:,2:]
 y = data[:,1]
 # KFold intro: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
 kf = KFold(n_splits=ns, random_state=None, shuffle=False)
@@ -90,7 +90,7 @@ for train_index, test_index in kf.split(X):
 print("############## model-1: removed 3Points_Per_minute and 2Points_Per_minute #################")
 data_1 = ld.select("id","Playoff","Points_Per_minute","FThrow_Per_minute","Rebound_Per_minute","Assists_Per_minute","Steals_Per_minute","Blocks_Per_minute","TurnOvers_Per_minute").collect()
 data = np.array(data_1).astype(np.float64)
-X_1 = data[:,1:]
+X_1 = data[:,2:]
 y_1 = data[:,1]
 
 # KFold intro: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
@@ -111,7 +111,7 @@ for train_index, test_index in kf.split(X_1):
 print("############## model-2: removed Points_Per_minute and 3Points_Per_minute #################")
 data_2 = ld.select("id","Playoff","2Points_Per_minute","FThrow_Per_minute","Rebound_Per_minute","Assists_Per_minute","Steals_Per_minute","Blocks_Per_minute","TurnOvers_Per_minute").collect()
 data = np.array(data_2).astype(np.float64)
-X_2 = data[:,1:]
+X_2 = data[:,2:]
 y_2 = data[:,1]
 
 # KFold intro: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
@@ -132,7 +132,7 @@ for train_index, test_index in kf.split(X_2):
 print("############## model-3: removed Points_Per_minute and 2Points_Per_minute #################")
 data_3 = ld.select("id","Playoff","3Points_Per_minute","FThrow_Per_minute","Rebound_Per_minute","Assists_Per_minute","Steals_Per_minute","Blocks_Per_minute","TurnOvers_Per_minute").collect()
 data = np.array(data_3).astype(np.float64)
-X_3 = data[:,1:]
+X_3 = data[:,2:]
 y_3 = data[:,1]
 
 # KFold intro: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
