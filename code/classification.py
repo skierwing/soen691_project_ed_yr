@@ -56,14 +56,14 @@ X_train = X[0:774]
 X_test = X[775:]
 y_train = y[0:774]
 y_test = y[775:]
-
+print("starting 70:30 traing:testing")
 print("############## Algorithm 1: Support Vector Machines #################")
 run_SVM(X_train, X_test, y_train, y_test)
 
 print("############## Algorithm 2: Gaussian Naive Bayes #################")
 run_GNB(X_train, X_test, y_train, y_test)
 
-print(xxxx)
+print("end of 70:30 traing:testing")
 ###test-end
 
 
