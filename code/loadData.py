@@ -114,7 +114,6 @@ def load_data():
     data_classifiers = df.select("id","Playoff","Points_Per_minute","3Points_Per_minute","2Points_Per_minute","FThrow_Per_minute",
     "Rebound_Per_minute","Assists_Per_minute","Steals_Per_minute","Blocks_Per_minute","TurnOvers_Per_minute")
     
-    return data_classifiers.collect()
-
+    return data_classifiers#.collect()
 
 #a= load_data()
