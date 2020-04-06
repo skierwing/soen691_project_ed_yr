@@ -5,6 +5,10 @@ import numpy as np
 from sklearn.model_selection import KFold
 from sklearn import model_selection
 
+import warnings
+warnings.filterwarnings('ignore')
+import numpy as np
+
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
@@ -37,7 +41,7 @@ def run_SVM(X_train,X_test,y_train,y_test):
     predictions = svm.predict(X_test)
     # Performance measure
     # use the classification report in order to extract the average F1 measure
-    print(classification_report(y_test, predictions))
+    print(classification_report(y_test, predictions,target_names=target_names))
     # displaying the classification performances through the confusion matrix as well.
     cm = confusion_matrix(y_test, predictions)
     print(cm)
@@ -187,7 +191,6 @@ print(xxx)
 """
 ###test-end
 
-
 ns = 5
 print("############## model-0: all columns #################")
 data = np.array(ld.collect()).astype(np.float64)
@@ -296,8 +299,10 @@ for train_index, test_index in kf.split(X_3):
 
     print("############## Algorithm 2: Gaussian Naive Bayes #################")
     run_GNB(X_train, X_test, y_train, y_test)
+<<<<<<< HEAD
 
     print("############## Algorithm 3: Voting Ensemble #################")
     #run_VE(X_train, X_test, y_train, y_test)
     run_RF(X_train, X_test, y_train, y_test)
 """
+
