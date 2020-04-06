@@ -1,6 +1,8 @@
 import time
 from sklearn.model_selection import KFold
 from sklearn import model_selection
+import warnings
+warnings.filterwarnings('ignore')
 import numpy as np
 
 from sklearn.tree import DecisionTreeClassifier
@@ -13,6 +15,9 @@ from sklearn.naive_bayes import GaussianNB
 from loadData import load_data
 ld = load_data()
 
+
+target_names = ['Playoff','Playoff']
+
 def run_SVM(X_train,X_test,y_train,y_test):
     # Training the SVM model using X_train and Y_train
     start_time = time.time()
@@ -24,7 +29,7 @@ def run_SVM(X_train,X_test,y_train,y_test):
     predictions = svm.predict(X_test)
     # Performance measure
     # use the classification report in order to extract the average F1 measure
-    print(classification_report(y_test, predictions))
+    print(classification_report(y_test, predictions,target_names=target_names))
     # displaying the classification performances through the confusion matrix as well.
     print(confusion_matrix(y_test, predictions))
     print("--- Testing Time %s seconds ---" % (time.time() - start_time))
@@ -41,7 +46,7 @@ def run_GNB(X_train,X_test,y_train,y_test):
 
     # Performance measure
     # use the classification report in order to extract the average F1 measure
-    print(classification_report(y_test, predictions))
+    print(classification_report(y_test, predictions,target_names=target_names))
     # displaying the classification performances through the confusion matrix as well.
     print(confusion_matrix(y_test, predictions))
     print("--- Testing Time %s seconds ---" % (time.time() - start_time))
@@ -65,7 +70,6 @@ run_GNB(X_train, X_test, y_train, y_test)
 
 print("end of 70:30 traing:testing")
 ###test-end
-
 
 ns = 5
 print("############## model-0: all columns #################")
