@@ -33,7 +33,7 @@ target_names = ['Playoff#0','Playoff#1']
 def run_SVM(X_train,X_test,y_train,y_test):
     # Training the SVM model using X_train and Y_train
     start_time = time.time()
-    svm = SVC(kernel='sigmoid',gamma='scale')
+    svm = SVC(kernel='rbf',C=100,gamma='scale')
     svm.fit(X_train, y_train)
     print("---Training Time %s seconds ---" % (time.time() - start_time))
     # Classification of X_test using the SVM model
@@ -191,11 +191,13 @@ print(xxx)
 """
 ###test-end
 
-ns = 5
+
+
 print("############## model-0: all columns #################")
 data = np.array(ld.collect()).astype(np.float64)
 X = data[:,2:]
 y = data[:,1]
+"""
 ts = 0.2
 X_train, X_test,y_train, y_test = model_selection.train_test_split(X,y,test_size = ts)
 print("############## Algorithm 1: Support Vector Machines #################")
@@ -209,7 +211,7 @@ run_VE(X_train, X_test, y_train, y_test)
 #run_RF(X_train, X_test, y_train, y_test)
 
 """
-# KFold intro: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
+ns = 5
 kf = KFold(n_splits=ns, random_state=None, shuffle=False)
 count=0
 for train_index, test_index in kf.split(X):
@@ -224,10 +226,10 @@ for train_index, test_index in kf.split(X):
     print("############## Algorithm 2: Gaussian Naive Bayes #################")
     run_GNB(X_train, X_test, y_train, y_test)
 
-    print("############## Algorithm 3: Voting Ensemble #################")
+    #print("############## Algorithm 3: Voting Ensemble #################")
     #run_VE(X_train, X_test, y_train, y_test)
-    run_RF(X_train, X_test, y_train, y_test)
-"""
+    #run_RF(X_train, X_test, y_train, y_test)
+
 """
 print("############## model-1: removed 3Points_Per_minute and 2Points_Per_minute #################")
 data_1 = ld.select("id","Playoff","Points_Per_minute","FThrow_Per_minute","Rebound_Per_minute","Assists_Per_minute","Steals_Per_minute","Blocks_Per_minute","TurnOvers_Per_minute").collect()
@@ -299,7 +301,6 @@ for train_index, test_index in kf.split(X_3):
 
     print("############## Algorithm 2: Gaussian Naive Bayes #################")
     run_GNB(X_train, X_test, y_train, y_test)
-<<<<<<< HEAD
 
     print("############## Algorithm 3: Voting Ensemble #################")
     #run_VE(X_train, X_test, y_train, y_test)
