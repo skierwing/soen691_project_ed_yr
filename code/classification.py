@@ -33,7 +33,7 @@ target_names = ['Playoff#0','Playoff#1']
 def run_SVM(X_train,X_test,y_train,y_test):
     # Training the SVM model using X_train and Y_train
     start_time = time.time()
-    svm = SVC(kernel='rbf',C=100,gamma='scale')
+    svm = SVC(kernel='rbf',C=100,gamma=10)
     svm.fit(X_train, y_train)
     print("---Training Time %s seconds ---" % (time.time() - start_time))
     # Classification of X_test using the SVM model
