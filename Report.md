@@ -13,19 +13,19 @@
 
 
 ### Table of Contents
-1. [Abstract](####Abstract)
+1. [Abstract](#Abstract)
 
-2. [Introduction](####Introduction)
+2. [Introduction](#Introduction)
 
-3. [Materials and Methods](####Materials and Methods)
+3. [Materials and Methods](#Materials and Methods)
 
-4. [Results](####Results)
+4. [Results](#Results)
 
-5. [Discussion](####Discussion)
+5. [Discussion](#Discussion)
 
-6. [References](####References)
+6. [References](#References)
 
-7. [Glossary](####Glossary)
+7. [Glossary](#Glossary)
 
    
 
@@ -63,7 +63,7 @@
 
    The data was gathered manually from [basketball-reference.com/leagues/](https://www.basketball-reference.com/leagues/)  website section. We started from the 1980 NBA season and went up to 2018 season. The data are the teams statistics during the regular season, below is a sample screenshot of the 1980 NBA season.
 
-   ![NBA_1980_Season_Summary _ Basketball-Reference.com](.\images\NBA_1980_Season_Summary _ Basketball-Reference.com.png)
+   ![NBA_1980_Season_Summary _ Basketball-Reference.com](images\NBA_1980_Season_Summary _ Basketball-Reference.com.png)
 
    ##### Technologies & Algorithms
 
