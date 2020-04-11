@@ -61,7 +61,7 @@
 
    ##### Dataset
 
-   The data was gathered manually from [basketball-reference.com/leagues/](https://www.basketball-reference.com/leagues/)  website section. We started from the 1980 NBA season and went up to 2018 season. The data are the teams statistics during the regular season, below is a sample screenshot of the 1980 NBA season.
+   The data was gathered manually from [basketball-reference.com/leagues/](https://www.basketball-reference.com/leagues/)  website leagues module. We started from the 1980 NBA season and went up to 2018 season. The data are the teams statistics during the regular season, below is a sample screenshot of the 1980 NBA season.
 
    ![1980 NBA season](images/NBA_1980_Season_Summary.png)
 
@@ -73,9 +73,19 @@
 
    
 
-   **at the end of the document the [glossary](#Glossary) explains the name of the fields 
+   *At the end of the document the [glossary](#Glossary) explains the name of the fields* 
 
-   ##### Technologies & Algorithms
+   ##### Technologies 
+
+   We have decided to use the following technologies:
+
+   - Apache Spark Framework : As per [wikipedia](https://en.wikipedia.org/wiki/Apache_Spark) Apache Spark is an open-source distributed general-purpose cluster-computing framework. Spark provides an interface for programming entire clusters with implicit data parallelism and fault tolerance.
+   -  Dataframe API library :  As per [wikipedia](https://en.wikipedia.org/wiki/Apache_Spark) again Apache Spark has as its architectural foundation the Resilient Distributed Dataset (RDD) and The *<u>Dataframe</u>* API was released as an abstraction on top of the RDD
+   - SKlearn  (Scikit-learn): As per [wikipedia](https://en.wikipedia.org/wiki/Scikit-learn) is a free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines, random forests, gradient boosting, k-means and DBSCAN
+
+   ##### Algorithms
+
+   
 
 4. #### Results:
 
@@ -94,6 +104,12 @@
 6. #### References
 
    1. [NBA Team Values 2019: Knicks On Top At $4 Billion](https://www.forbes.com/sites/kurtbadenhausen/2019/02/06/nba-team-values-2019-knicks-on-top-at-4-billion/#70067f0ee667)
+   2. [Predicting the NBA Playoffs with Machine Learning](https://rstudio-pubs-static.s3.amazonaws.com/190581_5edd87c937f2489c86c1b9b567a62b6e.html)
+   3. [Prediction of NBA games based on Machine Learning Methods](https://homepages.cae.wisc.edu/~ece539/fall13/project/AmorimTorres_rpt.pdf) 
+   4.  [basketball-reference.com](https://www.basketball-reference.com/)
+   5.  [basketball-reference.com/leagues/](https://www.basketball-reference.com/leagues/) 
+   6. [Apache Spark wikipedia](https://en.wikipedia.org/wiki/Apache_Spark)
+   7. [Sklearn wikipedia](https://en.wikipedia.org/wiki/Scikit-learn)
 
    
 
@@ -126,5 +142,5 @@
     PF: Personal Fouls
     PTS: Points
    ```
-   
+
 
