@@ -17,7 +17,7 @@
 
 2. [Introduction](#Introduction)
 
-3. [Materials and Methods](#Materials and Methods)
+3. [Materials and Methods](#Materials_and_Methods)
 
 4. [Results](#Results)
 
@@ -57,13 +57,13 @@
 
       
 
-3. #### Materials and Methods
+3. #### Materials and Methods <a name="Materials_and_Methods"></a>
 
    ##### Dataset
 
    The data was gathered manually from [basketball-reference.com/leagues/](https://www.basketball-reference.com/leagues/)  website section. We started from the 1980 NBA season and went up to 2018 season. The data are the teams statistics during the regular season, below is a sample screenshot of the 1980 NBA season.
 
-   ![NBA_1980_Season_Summary _ Basketball-Reference.com](images\NBA_1980_Season_Summary _ Basketball-Reference.com.png)
+   ![1980 NBA season](images/NBA_1980_Season_Summary_Basketball-Reference.com.png.png)
 
    ##### Technologies & Algorithms
 
