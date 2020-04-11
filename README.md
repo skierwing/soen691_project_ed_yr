@@ -105,6 +105,24 @@
 
    ##### <u>Technology Implementation</u>
 
+   - **<u>Data loading and pre-processing</u>**: Using Dataframe API in the Spark Framework we calculated and extracted our classifiers that will be used in the supervised modeling algorithms. As explained before we have used **MP** field to get a  ratio of the field that will be processed; example the **PTS** *(points)*  field below
+
+     ```python
+     df.withColumn("Points_Per_minute",col("PTS")/col("MP"))
+     ```
+
+     below is a code  data load code snip :![code preview](images/loading_data_code.png) 
+
+     The classifiers that were created and used are: *"Playoff" , "Points_Per_minute", "3Points_Per_minute" , "2Points_Per_minute" , "FThrow_Per_minute" , "Rebound_Per_minute", "Assists_Per_minute" , "Steals_Per_minute" , "Blocks_Per_minute" , "TurnOvers_Per_minute"*
+
+     
+
+   - **<u>Split Data using K-fold</u>**: 
+
+   - <u>**Data modeling and classification**</u>:
+
+   - **<u>Performance evaluation</u>**: F1 score, confusion matrix
+
    ##### <u>Technology Comparison</u>
 
    
