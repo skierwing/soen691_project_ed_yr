@@ -63,7 +63,7 @@
 
    The data was gathered manually from [basketball-reference.com/leagues/](https://www.basketball-reference.com/leagues/)  website section. We started from the 1980 NBA season and went up to 2018 season. The data are the teams statistics during the regular season, below is a sample screenshot of the 1980 NBA season.
 
-   ![1980 NBA season](images/NBA_1980_Season_Summary_Basketball-Reference.com.png.png)
+   ![1980 NBA season](images/NBA_1980_Season_Summary.png)
 
    ##### Technologies & Algorithms
 
