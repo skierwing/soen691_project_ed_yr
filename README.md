@@ -101,6 +101,10 @@
 
    ##### <u>Dataset Analysis</u>
 
+   As we have we were analyzing the dataset at hand we noticed a couple of issues that might skew the results. First the number of teams changed over the years 23, 27, 29 and lately 30. Moreover between seasons 1980 and 1983 twelve teams qualified to the playoffs but as of 1984 season the number was increased to sixteen teams.
+
+   After a close study of the data we noticed that each team plays a certain minutes per season the field name in the data was **MP** *(Minutes Played)* so we deduced that if we used the **MP** field as a divisor for all the quantitative fields that we are choosing as classifier we can resolve the issue by converting the classifiers to ratios.
+
    ##### <u>Technology Implementation</u>
 
    ##### <u>Technology Comparison</u>
