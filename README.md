@@ -111,11 +111,28 @@
      df.withColumn("Points_Per_minute",col("PTS")/col("MP"))
      ```
 
-     below is a code  data load code snip :![code preview](images/loading_data_code.png) 
+     below is a code  data load code snip :
 
-     The classifiers that were created and used are: *"Playoff" , "Points_Per_minute", "3Points_Per_minute" , "2Points_Per_minute" , "FThrow_Per_minute" , "Rebound_Per_minute", "Assists_Per_minute" , "Steals_Per_minute" , "Blocks_Per_minute" , "TurnOvers_Per_minute"*
+     ```python
+         df = spark.read.csv(filename, header=True, mode="DROPMALFORMED", encoding='utf-8')    
+         df = df.select("id","year","team","3P","2P","FT","TRB","AST","STL","BLK","TOV","PTS","MP","Playoff")
+         df = df.withColumn("Points_Per_minute",col("PTS")/col("MP"))
+         df = df.withColumn("3Points_Per_minute",col("3P")/col("MP"))
+         df = df.withColumn("2Points_Per_minute",col("2P")/col("MP"))
+         df = df.withColumn("FThrow_Per_minute",col("FT")/col("MP"))
+         df = df.withColumn("Rebound_Per_minute",col("TRB")/col("MP"))
+         df = df.withColumn("Assists_Per_minute",col("AST")/col("MP"))
+         df = df.withColumn("Steals_Per_minute",col("STL")/col("MP"))
+         df = df.withColumn("Blocks_Per_minute",col("BLK")/col("MP"))
+         df = df.withColumn("TurnOvers_Per_minute",col("TOV")/col("MP"))
+         
+     ```
 
-     
+      The classifiers that were created and used are:
+
+     ```python
+     data_classifiers = df.select("id","Playoff", "Points_Per_minute", "3Points_Per_minute", "2Points_Per_minute", "FThrow_Per_minute", "Rebound_Per_minute", "Assists_Per_minute", "Steals_Per_minute", "Blocks_Per_minute", "TurnOvers_Per_minute")
+     ```
 
    - **<u>Split Data using K-fold</u>**: 
 
