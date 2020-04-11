@@ -41,7 +41,7 @@
 
    ##### <u>Context</u>
 
-   Predictions of sports events has always been intriguing while challenging as there are many factors that must be considered. According to Forbes.com[1] magazine NBA teams’ value or revenue is in billions of dollars. Which means it can have big merit in predicting which team is performing good and who will make it to the playoffs.  
+   Prediction of sports events has always been intriguing while challenging as there are many factors that must be considered. According to Forbes.com[1] magazine NBA teams’ value or revenue is in billions of dollars. Which means it can have big merit in predicting which team is performing good and who will make it to the playoffs.  
 
    ##### <u>Objective</u> 
 
@@ -51,7 +51,7 @@
 
    Due to the time constraints we were not able to find exact studies, but we found two research project papers on analysis of predicting NBA game results. 
 
-   1. [Predicting the NBA Playoffs with Machine Learning](https://rstudio-pubs-static.s3.amazonaws.com/190581_5edd87c937f2489c86c1b9b567a62b6e.html) a study made by Matthew Tribby in 2016  to predict who will win in a match between 2 teams. Even though he use is using the same [basketball-reference.com](https://www.basketball-reference.com/) reference to gather the data and his dataset our datasets do not have the same classifiers.
+   1. [Predicting the NBA Playoffs with Machine Learning](https://rstudio-pubs-static.s3.amazonaws.com/190581_5edd87c937f2489c86c1b9b567a62b6e.html) a study made by Matthew Tribby in 2016  to predict who will win in a match between 2 teams. Even though he is using the same [basketball-reference.com](https://www.basketball-reference.com/) reference to gather the data and his dataset our datasets do not have the same classifiers.
 
    2. [Prediction of NBA games based on Machine Learning Methods](https://homepages.cae.wisc.edu/~ece539/fall13/project/AmorimTorres_rpt.pdf) is another study by Renato Amorim Torres in 2013 where he is again using the same [basketball-reference.com](https://www.basketball-reference.com/) reference to build his data and is trying to predict the outcome of a match but we differ in our choice of classifiers. 
 
