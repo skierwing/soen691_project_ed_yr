@@ -134,11 +134,73 @@
      data_classifiers = df.select("id","Playoff", "Points_Per_minute", "3Points_Per_minute", "2Points_Per_minute", "FThrow_Per_minute", "Rebound_Per_minute", "Assists_Per_minute", "Steals_Per_minute", "Blocks_Per_minute", "TurnOvers_Per_minute")
      ```
 
-   - **<u>Split Data using K-fold</u>**: 
+   - **<u>Split Data using K-fold</u>**: Is a good cross-validation method that tackles overfitting or underfitting.
 
-   - <u>**Data modeling and classification**</u>:
+     using sklearn.model_selection we set k to be 5
 
-   - **<u>Performance evaluation</u>**: F1 score, confusion matrix
+     ```python
+     ns = 5
+     kf = KFold(n_splits=ns, random_state=None, shuffle=False)
+     count=0
+     ```
+
+     then  called the modeling algorithms k times
+
+     ```python
+     for train_index, test_index in kf.split(X):
+         count+=1
+         print("################### K-FOLD Round "+str(count)+" ##########################")
+         X_train, X_test = X[train_index], X[test_index]
+         y_train, y_test = y[train_index], y[test_index]
+     
+         print("############## Algorithm 1: Support Vector Machines #################")
+         run_SVM(X_train, X_test, y_train, y_test)
+     
+         print("############## Algorithm 2: Gaussian Naive Bayes #################")
+         run_GNB(X_train, X_test, y_train, y_test)
+     ```
+
+     
+
+   - <u>**Data modeling and classification**</u>: Using sklearn.naive_bayes **GaussianNB** and sklearn.svm **SVC** we programmed the Gaussian Naïve Bayes and SVM function.
+
+     *Prerequisite  declaration, we defined 2 arrays. The has the classifiers only the second include the playoff label as follow*
+
+     ```python
+     data = np.array(ld.collect()).astype(np.float64)
+     X = data[:,2:]
+     y = data[:,1]
+     ```
+
+     Gaussian Naïve Bayes:
+
+     ```python
+     def run_GNB(X_train,X_test,y_train,y_test):
+         start_time = time.time()
+         gnb = GaussianNB()
+         gnb.fit(X_train, y_train)
+         print("---Training Time %s seconds ---" % (time.time() - start_time))
+         start_time = time.time()
+         predictions = gnb.predict(X_test)
+     ```
+
+     SVM: 
+
+     ```python
+     def run_SVM(X_train,X_test,y_train,y_test):
+         # Training the SVM model using X_train and Y_train
+         start_time = time.time()
+         svm = SVC(kernel='rbf',C=100,gamma=10)
+         svm.fit(X_train, y_train)
+         print("---Training Time %s seconds ---" % (time.time() - start_time))
+         # Classification of X_test using the SVM model
+         start_time = time.time()
+         predictions = svm.predict(X_test)
+     ```
+
+     **P.S**. *We had to have multiple runs to configure the SVM to give the best result with respect to our data set. as a consequence we found that setting C to 100 and gamma=10 will give the best result. C should be larger when you think your data is less ‘noisy’. The gamma parameter defines how far the influence of a single training example reaches, with low values meaning ‘far’ and high values meaning ‘close’.* 
+
+     **<u>Performance evaluation</u>**: F1 score, confusion matrix
 
    ##### <u>Technology Comparison</u>
 
