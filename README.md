@@ -45,15 +45,15 @@
 
    ##### <u>Objective</u> 
 
-   The objective of this project is to use SVM and Naïve Bayes algorithms to make early predictions during the regular whether an NBA team is performing well and will be advancing to the playoffs. Then analyzing the performance and result of different algorithms applied.
+   The objective of this project is to use SVM and Naïve Bayes algorithms to make early predictions during the regular NBA season and estimate whether a team is performing well and will be advancing to the playoffs. This will be achieved by analyzing the performance and result of different algorithms applied against the classifiers.
 
    ##### <u>Related Works</u>
 
    Due to the time constraints we were not able to find exact studies, but we found two research project papers on analysis of predicting NBA game results. 
 
-   1. [Predicting the NBA Playoffs with Machine Learning](https://rstudio-pubs-static.s3.amazonaws.com/190581_5edd87c937f2489c86c1b9b567a62b6e.html) a study made by Matthew Tribby in 2016  to predict who will win in a match between 2 teams. Even though he use using the same dataset reference [basketball-reference.com](https://www.basketball-reference.com/) to gather the data our datasets do not have the same classifiers.
+   1. [Predicting the NBA Playoffs with Machine Learning](https://rstudio-pubs-static.s3.amazonaws.com/190581_5edd87c937f2489c86c1b9b567a62b6e.html) a study made by Matthew Tribby in 2016  to predict who will win in a match between 2 teams. Even though he use is using the same [basketball-reference.com](https://www.basketball-reference.com/) reference to gather the data and his dataset our datasets do not have the same classifiers.
 
-   2. [Prediction of NBA games based on Machine Learning Methods](https://homepages.cae.wisc.edu/~ece539/fall13/project/AmorimTorres_rpt.pdf) is another study by Renato Amorim Torres in 2013 where he is using the same dataset reference [basketball-reference.com](https://www.basketball-reference.com/)  and is trying to predict the outcome of a match. 
+   2. [Prediction of NBA games based on Machine Learning Methods](https://homepages.cae.wisc.edu/~ece539/fall13/project/AmorimTorres_rpt.pdf) is another study by Renato Amorim Torres in 2013 where he is again using the same [basketball-reference.com](https://www.basketball-reference.com/) reference to build his data and is trying to predict the outcome of a match but we differ in our choice of classifiers. 
 
       
 
@@ -91,9 +91,7 @@
 
    ![](images/gnb_formula.png) using the mean and standard deviation result that was calculated, it becomes possible to estimate the probability of the classifying attribute using the Gaussian function:![img](images/gnb_formula_2.png)
 
-   <u>SVM</u>: It focus on generating hyperplanes that segregates the classes in the best way. 
-
-   **Radial basis function kernel**: The RBF kernel is a popular kernel function commonly used in SVM classification. **RBF can map an input space in infinite dimensional space**.
+   <u>SVM</u>: It focus on generating hyperplanes that segregates the classes in the best way.  **Radial basis function kernel**: The RBF kernel is a popular kernel function commonly used in SVM classification. **RBF can map an input space in infinite dimensional space**.
 
    
 
