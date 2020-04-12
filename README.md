@@ -31,23 +31,23 @@
 
 <a/>
 
-1. #### Abstract                                                                                  
+1. ### Abstract                                                                                  
 
    Machine learning algorithms with predictive analytics has become a key to fully understand how things work in different fields, and further a key to sustainable developments and improvements. This project presents a comparative study between two supervised learning algorithms (Gaussian Naïve Bayes and Support Vector Machine) in big data, to make predictions based on basketball statistics. This project is going to gather quantitative data of the general statistics of the basketball teams in the regular NBA season. Then based on the quantitative analysis of classifiers studied the algorithms used will predict if a team is going to make it to the playoff or not.
 
    
 
-2. #### Introduction
+2. ### Introduction
 
-   ##### <u>Context</u>
+   #### <u>Context</u>
 
    Prediction of sports events has always been intriguing while challenging as there are many factors that must be considered. According to Forbes.com[1] magazine NBA teams’ value or revenue is in billions of dollars. Which means it can have big merit in predicting which team is performing good and who will make it to the playoffs.  
 
-   ##### <u>Objective</u> 
+   #### <u>Objective</u> 
 
    The objective of this project is to use SVM and Naïve Bayes algorithms to make early predictions during the regular NBA season and estimate whether a team is performing well and will be advancing to the playoffs. This will be achieved by analyzing the performance and result of different algorithms applied against the classifiers.
 
-   ##### <u>Related Works</u>
+   #### <u>Related Works</u>
 
    Due to the time constraints we were not able to find exact studies, but we found two research project papers on analysis of predicting NBA game results. 
 
@@ -57,9 +57,9 @@
 
       
 
-3. #### Materials and Methods <a name="Materials_and_Methods"></a>
+3. ### Materials and Methods <a name="Materials_and_Methods"></a>
 
-   ##### <u>Dataset</u>
+   #### <u>Dataset</u>
 
    The data was gathered manually from [basketball-reference.com/leagues/](https://www.basketball-reference.com/leagues/)  website leagues module. We started from the 1980 NBA season and went up to 2018 season. The data are the teams statistics during the regular season, below is a sample screenshot of the 1980 NBA season.
 
@@ -75,7 +75,7 @@
 
    *At the end of the document the [glossary](#Glossary) explains the name of the fields* 
 
-   ##### <u>Technologies</u> 
+   #### <u>Technologies</u> 
 
    We have decided to use the following technologies:
 
@@ -83,7 +83,7 @@
    -  Dataframe API library :  As per [wikipedia](https://en.wikipedia.org/wiki/Apache_Spark) again Apache Spark has as its architectural foundation the Resilient Distributed Dataset (RDD) and The *<u>Dataframe</u>* API was released as an abstraction on top of the RDD
    - SKlearn  (Scikit-learn): As per [wikipedia](https://en.wikipedia.org/wiki/Scikit-learn) is a free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines, random forests, gradient boosting, k-means and DBSCAN
 
-   ##### <u>Algorithms</u>
+   #### <u>Algorithms</u>
 
    Since we have a small dataset with only 1074 records we have decided to use Gaussian Naïve Bayes & SVM supervised learning models in our study.
 
@@ -95,15 +95,15 @@
 
    
 
-4. #### Results:
+4. ### Results:
 
-   ##### <u>Dataset Analysis</u>
+   #### <u>Dataset Analysis</u>
 
    As we have we were analyzing the dataset at hand we noticed a couple of issues that might skew the results. First the number of teams changed over the years 23, 27, 29 and lately 30. Moreover between seasons 1980 and 1983 twelve teams qualified to the playoffs but as of 1984 season the number was increased to sixteen teams.
 
    After a close study of the data we noticed that each team plays a certain minutes per season the field name in the data was **MP** *(Minutes Played)* so we deduced that if we used the **MP** field as a divisor for all the quantitative fields that we are choosing as classifier we can resolve the issue by converting the classifiers to ratios.
 
-   ##### <u>Technology Implementation</u>
+   #### <u>Technology Implementation</u>
 
    - **<u>Data loading and pre-processing</u>**: Using Dataframe API in the Spark Framework we calculated and extracted our classifiers that will be used in the supervised modeling algorithms. As explained before we have used **MP** field to get a  ratio of the field that will be processed; example the **PTS** *(points)*  field below
 
@@ -164,7 +164,7 @@
 
    - <u>**Data modeling and classification**</u>: Using sklearn.naive_bayes **GaussianNB** and sklearn.svm **SVC** we programmed the Gaussian Naïve Bayes and SVM function.
 
-     *Prerequisite  declaration, we defined 2 arrays. The has the classifiers only the second include the playoff label as follow*
+     *<u>Prerequisite  declaration</u>, we defined 2 arrays. The first has the classifiers only the second include the playoff label as follow*
 
      ```python
      data = np.array(ld.collect()).astype(np.float64)
@@ -202,15 +202,15 @@
 
      **<u>Performance evaluation</u>**: F1 score, confusion matrix
 
-   ##### <u>Technology Comparison</u>
+   #### <u>Technology Comparison</u>
 
    
 
-5. #### Discussion
+5. ### Discussion
 
    
 
-6. #### References
+6. ### References
 
    1. [NBA Team Values 2019: Knicks On Top At $4 Billion](https://www.forbes.com/sites/kurtbadenhausen/2019/02/06/nba-team-values-2019-knicks-on-top-at-4-billion/#70067f0ee667)
    2. [Predicting the NBA Playoffs with Machine Learning](https://rstudio-pubs-static.s3.amazonaws.com/190581_5edd87c937f2489c86c1b9b567a62b6e.html)
@@ -222,7 +222,7 @@
 
    
 
-7. #### Glossary
+7. ### Glossary
 
    ```html
     Rk: Rank
