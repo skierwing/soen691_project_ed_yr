@@ -241,7 +241,7 @@
 
    There is no single answer about which is the best classification method for a given dataset, it’s always advisable to test with more classifiers if possible, meanwhile, classifiers can be pretty sensitive towards parameter settings, with different parameters, the outputs can vary dramatically, therefore, the ‘best’ classification depends on the target problem and datasets provided.  In our case, as described above, we consider NBC to be a straightforward practice which people will generally use when calculating the probability of things that will happen, and the independence of variables make it possible to produce ideal outputs. RBF kernel SVM works well for large dimensional problems. Their performance will be observed during experimental phase.
 
-   Finally we can deduce that after the teams have spent some minutes played in the regular season, and following the same process and techniques above of dividing the minutes played by the selected quantitative classifiers then applying them to the SVM algorithm can give a correct prediction approximately 70%.
+   Finally we can deduce that after the NBA teams have spent some minutes played in the regular season, and following the same process and techniques above of dividing the minutes played by the selected quantitative classifiers then applying them to the SVM algorithm can give a correct prediction approximately 70%.
 
    
 
