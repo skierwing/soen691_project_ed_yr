@@ -33,7 +33,7 @@
 
 1. ### Abstract                                                                                  
 
-   Machine learning algorithms with predictive analytics has become a key to fully understand how things work in different fields, and further a key to sustainable developments and improvements. This project presents a comparative study between two supervised learning algorithms (Gaussian Naïve Bayes and Support Vector Machine) in big data, to make predictions based on basketball statistics. This project is going to gather quantitative data of the general statistics of the basketball teams in the regular NBA season. Then based on the quantitative analysis of classifiers studied the algorithms used will predict if a team is going to make it to the playoff or not.
+   Machine learning algorithms with predictive analytics have become a key to fully understand how things work in different fields, and further a key to sustainable developments and improvements. This project presents a comparative study between two supervised learning algorithms (Gaussian Naïve Bayes and Support Vector Machine) in big data, to make predictions based on basketball statistics. This project is going to gather quantitative data of the general statistics of the basketball teams in the regular NBA season. Then based on the quantitative analysis of classifiers studied the algorithms used will predict if a team is going to make it to the playoff or not.
 
    
 
@@ -91,7 +91,7 @@
 
    ![](images/gnb_formula.png) using the mean and standard deviation result that was calculated, it becomes possible to estimate the probability of the classifying attribute using the Gaussian function:![img](images/gnb_formula_2.png)
 
-   <u>SVM</u>: It's objective is generating hyperplanes that segregates the classes in the best way.  **Radial basis function kernel**: The RBF kernel is a popular kernel function commonly used in SVM classification. **RBF can map an input space in infinite dimensional space**.
+   <u>SVM</u>: Its objective is generating hyperplanes that segregates the classes in the best way.  **Radial basis function kernel**: The RBF kernel is a popular kernel function commonly used in SVM classification. **RBF can map an input space in infinite dimensional space**.
 
    
 
@@ -221,7 +221,11 @@
 
    #### <u>Technology Comparison</u>
 
-   Base on our chosen dataset and classifiers we can say that the Naïve Bayes classifier was faster during the execution period whereas SVM is better at predicting the <u>Playoff</u> out of the 5 rounds that the test has been done only once did the Naïve Bayes classifier beat the SVM and not by much below is the chart of the F1-score average weight for SVM and GNB:
+   Base on our chosen dataset and classifiers we can say that the Naïve Bayes classifier was faster during the execution period whereas SVM on average is better at predicting the <u>Playoff</u> out of the 5 rounds that the test has been done only once did the Naïve Bayes classifier beat the SVM and not by much below are the charts of the weighted average Precision, Recall and  F1-score of the  SVM and GNB:
+
+   ![SVM vs GNB](images/weighted_average_Precision_result.png)
+
+   ![SVM vs GNB](images/weighted_average_Recall_result.png)
 
    ![SVM vs GNB](images/weighted_average_F1_score_result.png)
 
@@ -235,9 +239,11 @@
 
 5. ### Discussion
 
-   We can deduce that after the teams have spent some minutes played in the regular season, and following the same process and techniques above of dividing the minutes played by the selected quantitative classifiers then applying them to GNB and SVM algorithms can give a correct prediction between the range of 66 to 73 percent.
+   There is no single answer about which is the best classification method for a given dataset, it’s always advisable to test with more classifiers if possible, meanwhile, classifiers can be pretty sensitive towards parameter settings, with different parameters, the outputs can vary dramatically, therefore, the ‘best’ classification depends on the target problem and datasets provided.  In our case, as described above, we consider NBC to be a straightforward practice which people will generally use when calculating the probability of things that will happen, and the independence of variables make it possible to produce ideal outputs. RBF kernel SVM works well for large dimensional problems. Their performance will be observed during experimental phase.
 
-   ​	There is no single answer about which is the best classification method for a given dataset, it’s always advisable to test with more classifiers if possible, meanwhile, classifiers can be pretty sensitive towards parameter settings, with different parameters, the outputs can vary dramatically, therefore, the ‘best’ classification depends on the target problem and datasets provided.  In our case, as described above, we consider NBC to be a straightforward practice which people will generally use when calculating the probability of things that will happen, and the independence of variables make it possible to produce ideal outputs. RBF kernel SVM works well for large dimensional problems. Their performance will be observed during experimental phase.
+   Finally we can deduce that after the teams have spent some minutes played in the regular season, and following the same process and techniques above of dividing the minutes played by the selected quantitative classifiers then applying them to the SVM algorithm can give a correct prediction approximately 70%.
+
+   
 
    
 
