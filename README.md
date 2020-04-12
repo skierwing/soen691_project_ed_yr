@@ -111,7 +111,7 @@
      df.withColumn("Points_Per_minute",col("PTS")/col("MP"))
      ```
 
-     below is a code  data load code snip :
+     below is a code  snip of data load is programmed :
 
      ```python
          df = spark.read.csv(filename, header=True, mode="DROPMALFORMED", encoding='utf-8')    
@@ -200,7 +200,24 @@
 
      **P.S**. *We had to have multiple runs to configure the SVM to give the best result with respect to our data set. as a consequence we found that setting C to 100 and gamma=10 will give the best result. C should be larger when you think your data is less ‘noisy’. The gamma parameter defines how far the influence of a single training example reaches, with low values meaning ‘far’ and high values meaning ‘close’.* 
 
-     **<u>Performance evaluation</u>**: F1 score, confusion matrix
+     **<u>Performance evaluation</u>**: Using qsklearn.metrics classification_report and sklearn.metrics confusion_matrix libraries to get the  F1 score and confusion matrix.
+
+     ```python
+     # Performance measure
+         # use the classification report in order to extract the average F1 measure
+         print(classification_report(y_test, predictions,target_names=target_names))
+         # displaying the classification performances through the confusion matrix as well.
+         cm = confusion_matrix(y_test, predictions)
+         print(cm)
+     ```
+
+     where target_names are set to:
+
+     ```python
+     target_names = ['Playoff#0','Playoff#1']
+     ```
+
+     
 
    #### <u>Technology Comparison</u>
 
