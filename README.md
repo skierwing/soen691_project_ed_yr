@@ -221,13 +221,27 @@
 
    #### <u>Technology Comparison</u>
 
-   To check the complete 5 round F1 Score and Confusion Matrix  Click on the image below:
+   Base on our chosen dataset and classifiers we can say that the Naïve Bayes classifier was faster during the execution period whereas SVM is better at predicting the <u>Playoff</u> out of the 5 rounds that the test has been done only once did the Naïve Bayes classifier beat the SVM and not by much below is the chart of the F1-score average weight for SVM and GNB:
+
+   ![SVM vs GNB](images/weighted_average_F1_score_result.png)
+
+   
+
+   
+
+   To view the complete 5 round (K folds) result of the F1 Score and Confusion Matrix  **press** <u>Ctrl+ Left Click</u> on the image below:
 
    [<img src="images/Results.png" alt="For Full Detailed Result Matrices Click Here" width="360" />](images/Results.png)
 
    
 
-6. ### References
+5. ### Discussion
+
+   There is no single answer about which is the best classification method for a given dataset, it’s always advisable to test with more classifiers if possible, meanwhile, classifiers can be pretty sensitive towards parameter settings, with different parameters, the outputs can vary dramatically, therefore, the ‘best’ classification depends on the target problem and datasets provided.  In our case, as described above, we consider NBC to be a straightforward practice which people will generally use when calculating the probability of things that will happen, and the independence of variables make it possible to produce ideal outputs. RBF kernel SVM works well for large dimensional problems. Their performance will be observed during experimental phase.
+
+   
+
+6. ### References 
 
    1. [NBA Team Values 2019: Knicks On Top At $4 Billion](https://www.forbes.com/sites/kurtbadenhausen/2019/02/06/nba-team-values-2019-knicks-on-top-at-4-billion/#70067f0ee667)
    2. [Predicting the NBA Playoffs with Machine Learning](https://rstudio-pubs-static.s3.amazonaws.com/190581_5edd87c937f2489c86c1b9b567a62b6e.html)
@@ -267,6 +281,8 @@
     TOV: Turnovers
     PF: Personal Fouls
     PTS: Points
+    GNB: Gaussian Naïve Bayes
+    SVM: Support Vector Machine
    ```
 
 
