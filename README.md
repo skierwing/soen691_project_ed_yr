@@ -51,7 +51,7 @@
 
    Due to the time constraints we were not able to find exact studies, but we found two research project papers on analysis of predicting NBA game results. 
 
-   1. [Predicting the NBA Playoffs with Machine Learning](https://rstudio-pubs-static.s3.amazonaws.com/190581_5edd87c937f2489c86c1b9b567a62b6e.html) a study made by Matthew Tribby in 2016  to predict who will win in a match between 2 teams. Even though he is using the same [basketball-reference.com](https://www.basketball-reference.com/) reference to gather the data and his dataset our datasets do not have the same classifiers.
+   1. [Predicting the NBA Playoffs with Machine Learning](https://rstudio-pubs-static.s3.amazonaws.com/190581_5edd87c937f2489c86c1b9b567a62b6e.html) a study made by Matthew Tribby in 2016  to predict who will win in a match between 2 teams. Even though he is using the same [basketball-reference.com](https://www.basketball-reference.com/) reference to gather the data but his dataset and our datasets do not have the same classifiers.
 
    2. [Prediction of NBA games based on Machine Learning Methods](https://homepages.cae.wisc.edu/~ece539/fall13/project/AmorimTorres_rpt.pdf) is another study by Renato Amorim Torres in 2013 where he is again using the same [basketball-reference.com](https://www.basketball-reference.com/) reference to build his data and is trying to predict the outcome of a match but we differ in our choice of classifiers. 
 
@@ -91,7 +91,7 @@
 
    ![](images/gnb_formula.png) using the mean and standard deviation result that was calculated, it becomes possible to estimate the probability of the classifying attribute using the Gaussian function:![img](images/gnb_formula_2.png)
 
-   <u>SVM</u>: It focus on generating hyperplanes that segregates the classes in the best way.  **Radial basis function kernel**: The RBF kernel is a popular kernel function commonly used in SVM classification. **RBF can map an input space in infinite dimensional space**.
+   <u>SVM</u>: It's objective is generating hyperplanes that segregates the classes in the best way.  **Radial basis function kernel**: The RBF kernel is a popular kernel function commonly used in SVM classification. **RBF can map an input space in infinite dimensional space**.
 
    
 
@@ -99,7 +99,7 @@
 
    #### <u>Dataset Analysis</u>
 
-   As we have we were analyzing the dataset at hand we noticed a couple of issues that might skew the results. First the number of teams changed over the years 23, 27, 29 and lately 30. Moreover between seasons 1980 and 1983 twelve teams qualified to the playoffs but as of 1984 season the number was increased to sixteen teams.
+   As we were analyzing the dataset at hand we noticed a couple of issues that might skew the results. First the number of teams changed over the years 23, 27, 29 and lately 30. Moreover between seasons 1980 and 1983 twelve teams qualified to the playoffs but as of 1984 season the number was increased to sixteen teams.
 
    After a close study of the data we noticed that each team plays a certain minutes per season the field name in the data was **MP** *(Minutes Played)* so we deduced that if we used the **MP** field as a divisor for all the quantitative fields that we are choosing as classifier we can resolve the issue by converting the classifiers to ratios.
 
@@ -227,8 +227,6 @@
 
    
 
-   
-
    To view the complete 5 round (K folds) result of the F1 Score and Confusion Matrix  **press** <u>Ctrl+ Left Click</u> on the image below:
 
    [<img src="images/Results.png" alt="For Full Detailed Result Matrices Click Here" width="360" />](images/Results.png)
@@ -237,7 +235,9 @@
 
 5. ### Discussion
 
-   There is no single answer about which is the best classification method for a given dataset, it’s always advisable to test with more classifiers if possible, meanwhile, classifiers can be pretty sensitive towards parameter settings, with different parameters, the outputs can vary dramatically, therefore, the ‘best’ classification depends on the target problem and datasets provided.  In our case, as described above, we consider NBC to be a straightforward practice which people will generally use when calculating the probability of things that will happen, and the independence of variables make it possible to produce ideal outputs. RBF kernel SVM works well for large dimensional problems. Their performance will be observed during experimental phase.
+   We can deduce that after the teams have spent some minutes played in the regular season, and following the same process and techniques above of dividing the minutes played by the selected quantitative classifiers then applying them to GNB and SVM algorithms can give a correct prediction between the range of 66 to 73 percent.
+
+   ​	There is no single answer about which is the best classification method for a given dataset, it’s always advisable to test with more classifiers if possible, meanwhile, classifiers can be pretty sensitive towards parameter settings, with different parameters, the outputs can vary dramatically, therefore, the ‘best’ classification depends on the target problem and datasets provided.  In our case, as described above, we consider NBC to be a straightforward practice which people will generally use when calculating the probability of things that will happen, and the independence of variables make it possible to produce ideal outputs. RBF kernel SVM works well for large dimensional problems. Their performance will be observed during experimental phase.
 
    
 
