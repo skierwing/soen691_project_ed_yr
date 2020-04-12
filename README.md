@@ -223,7 +223,7 @@
 
    To check the complete 5 round F1 Score and Confusion Matrix  Click on the image below:
 
-   [<img src="images/results.png" alt="For Full Detailed Result Matrices Click Here" style="zoom:25%;" />](images/results.png)
+   [<img src="images/Results.png" alt="For Full Detailed Result Matrices Click Here" style="zoom:25%;" />](images/results.png)
 
    
 
